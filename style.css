@@ -1,5 +1,130 @@
 /* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Fonts */
+@font-face {
+  font-family: "Avenir";
+  src: url("./asstes/fonts/AvenirLTStd-Black.otf");
+}
+
+@font-face {
+  font-family: "Avenir Roman";
+  src: url("./asstes/fonts/AvenirLTStd-Roman.otf");
+}
+
 /* Variables */
+:root {
+  --primary: #252525;
+  --secondary: #ffffff;
+}
+
 /* Base Styles */
+body {
+  background-color: var(--secondary);
+  color: var(--primary);
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  font-weight: 400;
+  text-align: center;
+  max-width: 645px;
+}
+
+.content h1 {
+  font-family: "Avenir";
+  font-weight: 800;
+}
+
+.content p {
+  font-family: "Avenir Roman";
+  color: rgba(37, 37, 37, 0.8);
+}
+
+.content a {
+  font-family: "Avenir Roman";
+  font-size: 1.125rem;
+  line-height: 18px;
+
+  display: inline-block;
+  border-radius: 1rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 18px 48px;
+}
+
 /* MObile Styles */
+.container {
+  padding: 1rem;
+}
+
+.content h1 {
+  font-size: 3rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.image-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.image-list > * {
+  grid-column: span 2;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 4rem;
+  }
+
+  .image-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 960px) {
+  .content h1 {
+    font-size: 4rem;
+  }
+
+  .content p {
+    font-size: 1.625rem;
+  }
+
+  .image-list {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
