@@ -1,6 +1,6 @@
 # Minimal Layouts - 01/50 (#Made-In-CSS-Grid)
 
-![Screenshot](/asstes/screenshot/layout-51-screenshot.png)
+![Screenshot](/asstes/screenshot/Minimal-01-screenshot.png)
 
 _50 days challenge on Minimal Layouts using CSS Grid and FlexBox._
 
